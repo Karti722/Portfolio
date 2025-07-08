@@ -333,6 +333,86 @@ footer {
   color: #e2e8f0;
 }
 
+/* Resume Section */
+.resume-container {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+.resume-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.resume-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.5rem;
+  border-radius: 10px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.resume-btn::after {
+  display: none;
+}
+
+.download-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.download-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+.view-btn {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: white;
+}
+
+.view-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
+}
+
+.resume-embed {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  background: white;
+}
+
+.resume-embed iframe {
+  border: none;
+  width: 100%;
+  min-height: 600px;
+  display: block;
+}
+
+.resume-embed p {
+  padding: 2rem;
+  text-align: center;
+  color: #64748b;
+  font-style: italic;
+}
+
+.resume-embed p a {
+  color: #667eea;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .profile-section {
@@ -374,6 +454,25 @@ footer {
   .skills ul {
     grid-template-columns: 1fr;
   }
+  
+  .resume-embed iframe {
+    min-height: 500px;
+  }
+  
+  .resume-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .resume-btn {
+    width: 100%;
+    max-width: 250px;
+    justify-content: center;
+  }
+  
+  .resume-container {
+    padding: 1.5rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -395,6 +494,14 @@ footer {
   }
   
   .job, .project, .certification {
+    padding: 1rem;
+  }
+  
+  .resume-embed iframe {
+    min-height: 400px;
+  }
+  
+  .resume-container {
     padding: 1rem;
   }
 }
